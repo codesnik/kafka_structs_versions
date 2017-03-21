@@ -1,0 +1,32 @@
+UpdateMetadataRequestV1 => controller_id controller_epoch [partition_states] [live_brokers]
+  controller_id => int32
+  controller_epoch => int32
+  partition_states => topic partition controller_epoch leader leader_epoch [isr] zk_version [replicas]
+    topic => string
+    partition => int32
+    controller_epoch => int32
+    leader => int32
+    leader_epoch => int32
+    isr => int32
+    zk_version => int32
+    replicas => int32
+  live_brokers => id [end_points]
+    id => int32
+    end_points => port host security_protocol_type
+      port => int32
+      host => string
+      security_protocol_type => int16
+# controller_id: The controller id.
+# controller_epoch: The controller epoch.
+# topic: Topic name.
+# partition: Topic partition id.
+# controller_epoch: The controller epoch.
+# leader: The broker id for the leader.
+# leader_epoch: The leader epoch.
+# isr: The in sync replica ids.
+# zk_version: The ZK version.
+# replicas: The replica ids.
+# id: The broker id.
+# port: The port on which the broker accepts requests.
+# host: The hostname of the broker.
+# security_protocol_type: The security protocol type.

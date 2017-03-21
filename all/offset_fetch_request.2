@@ -1,0 +1,11 @@
+OffsetFetchRequestV2 => group_id [topics]
+  group_id => string
+  topics => topic [partitions]
+    topic => string
+    partitions => partition
+      partition => int32
+# group_id: The consumer group id.
+# topics: Topics to fetch offsets. If the topic array is null fetch offsets for all topics.
+# topic: Topic to fetch offset.
+# partitions: Partitions to fetch offsets.
+# partition: Topic partition id.

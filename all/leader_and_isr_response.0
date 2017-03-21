@@ -1,0 +1,11 @@
+LeaderAndIsrResponseV0 => error_code [partitions]
+  error_code => int16
+  partitions => topic partition error_code
+    topic => string
+    partition => int32
+    error_code => int16
+
+# error_code: Error code.
+# topic: Topic name.
+# partition: Topic partition id.
+# error_code: Error code.

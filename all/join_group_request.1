@@ -1,0 +1,15 @@
+JoinGroupRequestV1 => group_id session_timeout rebalance_timeout member_id protocol_type [group_protocols]
+  group_id => string
+  session_timeout => int32
+  rebalance_timeout => int32
+  member_id => string
+  protocol_type => string
+  group_protocols => protocol_name protocol_metadata
+    protocol_name => string
+    protocol_metadata => bytes
+# group_id: The group id.
+# session_timeout: The coordinator considers the consumer dead if it receives no heartbeat after this timeout in ms.
+# rebalance_timeout: The maximum time that the coordinator will wait for each member to rejoin when rebalancing the group
+# member_id: The assigned consumer id or an empty string for a new consumer.
+# protocol_type: Unique name for class of protocols implemented by group
+# group_protocols: List of protocols that the member supports

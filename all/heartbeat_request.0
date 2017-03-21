@@ -1,0 +1,7 @@
+HeartbeatRequestV0 => group_id group_generation_id member_id
+  group_id => string
+  group_generation_id => int32
+  member_id => string
+# group_id: The group id.
+# group_generation_id: The generation of the group.
+# member_id: The member id assigned by the group coordinator.

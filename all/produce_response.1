@@ -1,0 +1,10 @@
+ProduceResponseV1 => [responses] throttle_time_ms
+  responses => topic [partition_responses]
+    topic => string
+    partition_responses => partition error_code base_offset
+      partition => int32
+      error_code => int16
+      base_offset => int64
+  throttle_time_ms => int32
+
+# throttle_time_ms: Duration in milliseconds for which the request was throttled due to quota violation. (Zero if the request did not violate any quota.)

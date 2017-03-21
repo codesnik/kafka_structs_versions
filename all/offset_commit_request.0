@@ -1,0 +1,15 @@
+OffsetCommitRequestV0 => group_id [topics]
+  group_id => string
+  topics => topic [partitions]
+    topic => string
+    partitions => partition offset metadata
+      partition => int32
+      offset => int64
+      metadata => nullable_string
+# group_id: The group id.
+# topics: Topics to commit offsets.
+# topic: Topic to commit.
+# partitions: Partitions to commit offsets.
+# partition: Topic partition id.
+# offset: Message offset to be committed.
+# metadata: Any associated metadata the client wants to keep.

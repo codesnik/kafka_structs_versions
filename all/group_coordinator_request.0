@@ -1,0 +1,3 @@
+GroupCoordinatorRequestV0 => group_id
+  group_id => string
+# group_id: The unique group id.

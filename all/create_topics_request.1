@@ -1,0 +1,24 @@
+CreateTopicsRequestV1 => [create_topic_requests] timeout validate_only
+  create_topic_requests => topic num_partitions replication_factor [replica_assignment] [configs]
+    topic => string
+    num_partitions => int32
+    replication_factor => int16
+    replica_assignment => partition_id [replicas]
+      partition_id => int32
+      replicas => int32
+    configs => config_key config_value
+      config_key => string
+      config_value => string
+  timeout => int32
+  validate_only => boolean
+# create_topic_requests: An array of single topic creation requests. Can not have multiple entries for the same topic.
+# topic: Name for newly created topic.
+# num_partitions: Number of partitions to be created. -1 indicates unset.
+# replication_factor: Replication factor for the topic. -1 indicates unset.
+# replica_assignment: Replica assignment among kafka brokers for this topic partitions. If this is set num_partitions and replication_factor must be unset.
+# replicas: The set of all nodes that should host this partition. The first replica in the list is the preferred leader.
+# configs: Topic level configuration for topic to be set.
+# config_key: Configuration key name
+# config_value: Configuration value
+# timeout: The time in ms to wait for a topic to be completely created on the controller node. Values <= 0 will trigger topic creation and return immediately
+# validate_only: If this is true, the request will be validated, but the topic won't be created.

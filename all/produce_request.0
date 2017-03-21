@@ -1,0 +1,10 @@
+ProduceRequestV0 => acks timeout [topic_data]
+  acks => int16
+  timeout => int32
+  topic_data => topic [data]
+    topic => string
+    data => partition record_set
+      partition => int32
+      record_set => records
+# acks: The number of acknowledgments the producer requires the leader to have received before considering a request complete. Allowed values: 0 for no acknowledgments, 1 for only the leader and -1 for the full ISR.
+# timeout: The time to await a response in ms.

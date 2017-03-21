@@ -1,0 +1,12 @@
+OffsetFetchResponseV1 => [responses]
+  responses => topic [partition_responses]
+    topic => string
+    partition_responses => partition offset metadata error_code
+      partition => int32
+      offset => int64
+      metadata => nullable_string
+      error_code => int16
+
+# partition: Topic partition id.
+# offset: Last committed message offset.
+# metadata: Any associated metadata the client wants to keep.

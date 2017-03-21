@@ -1,0 +1,5 @@
+ListGroupsResponseV0 => error_code [groups]
+  error_code => int16
+  groups => group_id protocol_type
+    group_id => string
+    protocol_type => string

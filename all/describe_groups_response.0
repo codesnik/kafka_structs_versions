@@ -1,0 +1,23 @@
+DescribeGroupsResponseV0 => [groups]
+  groups => error_code group_id state protocol_type protocol [members]
+    error_code => int16
+    group_id => string
+    state => string
+    protocol_type => string
+    protocol => string
+    members => member_id client_id client_host member_metadata member_assignment
+      member_id => string
+      client_id => string
+      client_host => string
+      member_metadata => bytes
+      member_assignment => bytes
+
+# state: The current state of the group (one of: Dead, Stable, AwaitingSync, or PreparingRebalance, or empty if there is no active group)
+# protocol_type: The current group protocol type (will be empty if there is no active group)
+# protocol: The current group protocol (only provided if the group is Stable)
+# members: Current group members (only provided if the group is not Dead)
+# member_id: The memberId assigned by the coordinator
+# client_id: The client id used in the member's latest join group request
+# client_host: The client host used in the request session corresponding to the member's join group.
+# member_metadata: The metadata corresponding to the current group protocol in use (will only be present if the group is stable).
+# member_assignment: The current assignment provided by the group leader (will only be present if the group is stable).

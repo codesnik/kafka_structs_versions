@@ -1,0 +1,19 @@
+FetchRequestV0 => replica_id max_wait_time min_bytes [topics]
+  replica_id => int32
+  max_wait_time => int32
+  min_bytes => int32
+  topics => topic [partitions]
+    topic => string
+    partitions => partition fetch_offset max_bytes
+      partition => int32
+      fetch_offset => int64
+      max_bytes => int32
+# replica_id: Broker id of the follower. For normal consumers, use -1.
+# max_wait_time: Maximum time in ms to wait for the response.
+# min_bytes: Minimum bytes to accumulate in the response.
+# topics: Topics to fetch.
+# topic: Topic to fetch.
+# partitions: Partitions to fetch.
+# partition: Topic partition id.
+# fetch_offset: Message offset.
+# max_bytes: Maximum bytes to fetch.

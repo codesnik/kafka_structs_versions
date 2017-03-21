@@ -1,0 +1,4 @@
+MetadataRequestV0 => [topics]
+  topics => string
+# topics: An array of topics to fetch metadata for. If no topics are specified fetch metadata for all topics.
+

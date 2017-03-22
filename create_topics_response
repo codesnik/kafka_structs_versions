@@ -1,0 +1,6 @@
+CreateTopicsResponse => [topic_errors]
+  topic_errors => topic error_code
+    topic => string
+    error_code => int16
+
+# topic_errors: An array of per topic error codes.

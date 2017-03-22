@@ -1,0 +1,15 @@
+OffsetsRequest => replica_id [topics]
+  replica_id => int32
+  topics => topic [partitions]
+    topic => string
+    partitions => partition timestamp max_num_offsets
+      partition => int32
+      timestamp => int64
+      max_num_offsets => int32
+# replica_id: Broker id of the follower. For normal consumers, use -1.
+# topics: Topics to list offsets.
+# topic: Topic to list offset.
+# partitions: Partitions to list offset.
+# partition: Topic partition id.
+# timestamp: Timestamp.
+# max_num_offsets: Maximum offsets to return.

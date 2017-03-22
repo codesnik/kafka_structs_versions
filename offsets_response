@@ -1,0 +1,10 @@
+OffsetsResponse => [responses]
+  responses => topic [partition_responses]
+    topic => string
+    partition_responses => partition error_code [offsets]
+      partition => int32
+      error_code => int16
+      offsets => int64
+
+# partition: Topic partition id.
+# offsets: A list of offsets.

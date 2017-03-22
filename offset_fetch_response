@@ -1,4 +1,4 @@
-OffsetFetchResponse => [responses]
+OffsetFetchResponse => [responses] error_code
   responses => topic [partition_responses]
     topic => string
     partition_responses => partition offset metadata error_code
@@ -6,6 +6,7 @@ OffsetFetchResponse => [responses]
       offset => int64
       metadata => nullable_string
       error_code => int16
+  error_code => int16
 
 # partition: Topic partition id.
 # offset: Last committed message offset.

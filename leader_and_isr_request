@@ -1,0 +1,29 @@
+LeaderAndIsrRequest => controller_id controller_epoch [partition_states] [live_leaders]
+  controller_id => int32
+  controller_epoch => int32
+  partition_states => topic partition controller_epoch leader leader_epoch [isr] zk_version [replicas]
+    topic => string
+    partition => int32
+    controller_epoch => int32
+    leader => int32
+    leader_epoch => int32
+    isr => int32
+    zk_version => int32
+    replicas => int32
+  live_leaders => id host port
+    id => int32
+    host => string
+    port => int32
+# controller_id: The controller id.
+# controller_epoch: The controller epoch.
+# topic: Topic name.
+# partition: Topic partition id.
+# controller_epoch: The controller epoch.
+# leader: The broker id for the leader.
+# leader_epoch: The leader epoch.
+# isr: The in sync replica ids.
+# zk_version: The ZK version.
+# replicas: The replica ids.
+# id: The broker id.
+# host: The hostname of the broker.
+# port: The port on which the broker accepts requests.

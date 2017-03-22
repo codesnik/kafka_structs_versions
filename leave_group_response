@@ -1,0 +1,2 @@
+LeaveGroupResponse => error_code
+  error_code => int16

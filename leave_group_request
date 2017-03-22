@@ -1,0 +1,5 @@
+LeaveGroupRequest => group_id member_id
+  group_id => string
+  member_id => string
+# group_id: The group id.
+# member_id: The member id assigned by the group coordinator.

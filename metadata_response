@@ -1,9 +1,10 @@
-MetadataResponse => [brokers] controller_id [topic_metadata]
+MetadataResponse => [brokers] cluster_id controller_id [topic_metadata]
   brokers => node_id host port rack
     node_id => int32
     host => string
     port => int32
     rack => nullable_string
+  cluster_id => nullable_string
   controller_id => int32
   topic_metadata => topic_error_code topic is_internal [partition_metadata]
     topic_error_code => int16
@@ -21,6 +22,7 @@ MetadataResponse => [brokers] controller_id [topic_metadata]
 # host: The hostname of the broker.
 # port: The port on which the broker accepts requests.
 # rack: The rack of the broker.
+# cluster_id: The cluster id that this broker belongs to.
 # controller_id: The broker id of the controller broker.
 # topic_error_code: The error code for the given topic.
 # topic: The name of the topic

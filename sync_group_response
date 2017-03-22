@@ -1,0 +1,3 @@
+SyncGroupResponse => error_code member_assignment
+  error_code => int16
+  member_assignment => bytes

@@ -1,0 +1,7 @@
+SyncGroupRequest => group_id generation_id member_id [group_assignment]
+  group_id => string
+  generation_id => int32
+  member_id => string
+  group_assignment => member_id member_assignment
+    member_id => string
+    member_assignment => bytes

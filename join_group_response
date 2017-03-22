@@ -1,0 +1,14 @@
+JoinGroupResponse => error_code generation_id group_protocol leader_id member_id [members]
+  error_code => int16
+  generation_id => int32
+  group_protocol => string
+  leader_id => string
+  member_id => string
+  members => member_id member_metadata
+    member_id => string
+    member_metadata => bytes
+
+# generation_id: The generation of the consumer group.
+# group_protocol: The group protocol selected by the coordinator
+# leader_id: The leader of the group
+# member_id: The consumer id assigned by the group coordinator.

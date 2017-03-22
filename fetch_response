@@ -1,4 +1,5 @@
-FetchResponse => [responses]
+FetchResponse => throttle_time_ms [responses]
+  throttle_time_ms => int32
   responses => topic [partition_responses]
     topic => string
     partition_responses => partition_header record_set
@@ -8,5 +9,6 @@ FetchResponse => [responses]
         high_watermark => int64
       record_set => records
 
+# throttle_time_ms: Duration in milliseconds for which the request was throttled due to quota violation. (Zero if the request did not violate any quota.)
 # partition: Topic partition id.
 # high_watermark: Last committed offset.

@@ -1,21 +1,21 @@
-OffsetCommitRequest => group_id group_generation_id member_id [topics]
+OffsetCommitRequest => group_id group_generation_id member_id retention_time [topics]
   group_id => string
   group_generation_id => int32
   member_id => string
+  retention_time => int64
   topics => topic [partitions]
     topic => string
-    partitions => partition offset timestamp metadata
+    partitions => partition offset metadata
       partition => int32
       offset => int64
-      timestamp => int64
       metadata => nullable_string
 # group_id: The group id.
-# group_generation_id: The generation of the group.
-# member_id: The member id assigned by the group coordinator.
+# group_generation_id: The generation of the consumer group.
+# member_id: The consumer id assigned by the group coordinator.
+# retention_time: Time period in ms to retain the offset.
 # topics: Topics to commit offsets.
 # topic: Topic to commit.
 # partitions: Partitions to commit offsets.
 # partition: Topic partition id.
 # offset: Message offset to be committed.
-# timestamp: Timestamp of the commit
 # metadata: Any associated metadata the client wants to keep.

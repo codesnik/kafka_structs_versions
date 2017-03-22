@@ -1,0 +1,3 @@
+SaslHandshakeRequest => mechanism
+  mechanism => string
+# mechanism: SASL Mechanism chosen by the client.

@@ -1,0 +1,5 @@
+SaslHandshakeResponse => error_code [enabled_mechanisms]
+  error_code => int16
+  enabled_mechanisms => string
+
+# enabled_mechanisms: Array of mechanisms enabled in the server.

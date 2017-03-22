@@ -1,0 +1,3 @@
+DescribeGroupsRequest => [group_ids]
+  group_ids => string
+# group_ids: List of groupIds to request metadata for (an empty groupId array will return empty group metadata).

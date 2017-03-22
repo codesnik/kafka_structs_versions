@@ -1,0 +1,11 @@
+GroupCoordinatorResponse => error_code coordinator
+  error_code => int16
+  coordinator => node_id host port
+    node_id => int32
+    host => string
+    port => int32
+
+# coordinator: Host and port information for the coordinator for a consumer group.
+# node_id: The broker id.
+# host: The hostname of the broker.
+# port: The port on which the broker accepts requests.

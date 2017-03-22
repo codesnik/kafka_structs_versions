@@ -1,0 +1,3 @@
+ControlledShutdownRequest => broker_id
+  broker_id => int32
+# broker_id: The id of the broker for which controlled shutdown has been requested.

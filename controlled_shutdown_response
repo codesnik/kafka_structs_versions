@@ -1,0 +1,8 @@
+ControlledShutdownResponse => error_code [partitions_remaining]
+  error_code => int16
+  partitions_remaining => topic partition
+    topic => string
+    partition => int32
+
+# partitions_remaining: The partitions that the broker still leads.
+# partition: Topic partition id.

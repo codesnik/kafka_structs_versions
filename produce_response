@@ -1,10 +1,12 @@
 ProduceResponse => [responses] throttle_time_ms
   responses => topic [partition_responses]
     topic => string
-    partition_responses => partition error_code base_offset
+    partition_responses => partition error_code base_offset log_append_time
       partition => int32
       error_code => int16
       base_offset => int64
+      log_append_time => int64
   throttle_time_ms => int32
 
+# log_append_time: The timestamp returned by broker after appending the messages. If CreateTime is used for the topic, the timestamp will be -1. If LogAppendTime is used for the topic, the timestamp will be the broker local time when the messages are appended.
 # throttle_time_ms: Duration in milliseconds for which the request was throttled due to quota violation. (Zero if the request did not violate any quota.)

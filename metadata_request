@@ -1,4 +1,3 @@
 MetadataRequest => [topics]
   topics => string
-# topics: An array of topics to fetch metadata for. If no topics are specified fetch metadata for all topics.
-
+# topics: An array of topics to fetch metadata for. If the topics array is null fetch metadata for all topics.

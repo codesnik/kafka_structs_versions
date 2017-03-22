@@ -1,0 +1,12 @@
+ApiVersionsResponse => error_code [api_versions]
+  error_code => int16
+  api_versions => api_key min_version max_version
+    api_key => int16
+    min_version => int16
+    max_version => int16
+
+# error_code: Error code.
+# api_versions: API versions supported by the broker.
+# api_key: API key.
+# min_version: Minimum supported version.
+# max_version: Maximum supported version.

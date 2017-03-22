@@ -10,12 +10,13 @@ UpdateMetadataRequest => controller_id controller_epoch [partition_states] [live
     isr => int32
     zk_version => int32
     replicas => int32
-  live_brokers => id [end_points]
+  live_brokers => id [end_points] rack
     id => int32
     end_points => port host security_protocol_type
       port => int32
       host => string
       security_protocol_type => int16
+    rack => nullable_string
 # controller_id: The controller id.
 # controller_epoch: The controller epoch.
 # topic: Topic name.
@@ -30,3 +31,4 @@ UpdateMetadataRequest => controller_id controller_epoch [partition_states] [live
 # port: The port on which the broker accepts requests.
 # host: The hostname of the broker.
 # security_protocol_type: The security protocol type.
+# rack: The rack

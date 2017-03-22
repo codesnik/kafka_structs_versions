@@ -1,0 +1,12 @@
+StopReplicaRequest => controller_id controller_epoch delete_partitions [partitions]
+  controller_id => int32
+  controller_epoch => int32
+  delete_partitions => boolean
+  partitions => topic partition
+    topic => string
+    partition => int32
+# controller_id: The controller id.
+# controller_epoch: The controller epoch.
+# delete_partitions: Boolean which indicates if replica's partitions must be deleted.
+# topic: Topic name.
+# partition: Topic partition id.

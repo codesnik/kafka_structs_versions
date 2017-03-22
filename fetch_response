@@ -1,0 +1,12 @@
+FetchResponse => [responses]
+  responses => topic [partition_responses]
+    topic => string
+    partition_responses => partition_header record_set
+      partition_header => partition error_code high_watermark
+        partition => int32
+        error_code => int16
+        high_watermark => int64
+      record_set => records
+
+# partition: Topic partition id.
+# high_watermark: Last committed offset.

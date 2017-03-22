@@ -1,0 +1,8 @@
+OffsetCommitResponse => [responses]
+  responses => topic [partition_responses]
+    topic => string
+    partition_responses => partition error_code
+      partition => int32
+      error_code => int16
+
+# partition: Topic partition id.

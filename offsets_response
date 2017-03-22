@@ -1,10 +1,12 @@
 OffsetsResponse => [responses]
   responses => topic [partition_responses]
     topic => string
-    partition_responses => partition error_code [offsets]
+    partition_responses => partition error_code timestamp offset
       partition => int32
       error_code => int16
-      offsets => int64
+      timestamp => int64
+      offset => int64
 
 # partition: Topic partition id.
-# offsets: A list of offsets.
+# timestamp: The timestamp associated with the returned offset
+# offset: offset found

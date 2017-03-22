@@ -1,0 +1,27 @@
+MetadataResponse => [brokers] [topic_metadata]
+  brokers => node_id host port
+    node_id => int32
+    host => string
+    port => int32
+  topic_metadata => topic_error_code topic [partition_metadata]
+    topic_error_code => int16
+    topic => string
+    partition_metadata => partition_error_code partition_id leader [replicas] [isr]
+      partition_error_code => int16
+      partition_id => int32
+      leader => int32
+      replicas => int32
+      isr => int32
+
+# brokers: Host and port information for all brokers.
+# node_id: The broker id.
+# host: The hostname of the broker.
+# port: The port on which the broker accepts requests.
+# topic_error_code: The error code for the given topic.
+# topic: The name of the topic
+# partition_metadata: Metadata for each partition of the topic.
+# partition_error_code: The error code for the partition, if any.
+# partition_id: The id of the partition.
+# leader: The id of the broker acting as leader for this partition.
+# replicas: The set of all nodes that host this partition.
+# isr: The set of nodes that are in sync with the leader for this partition.
